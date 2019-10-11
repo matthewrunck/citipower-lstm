@@ -14,6 +14,7 @@ Other weather variables not used in this analysis
 '''
 
 CitiPower <- read.csv("CitiPower.csv")
+colnames(CitiPower) <- c('Date','Month','Hour','Temp','DewTemp','Wind','COP','Weekend','Demand')
 CitiPower$Date <- as.Date(CitiPower$Date,format='%d/%m/%Y')
 CitiPower$Hour <- as.factor(CitiPower$Hour)
 CitiPower$Weekend <- as.factor(CitiPower$Weekend)
